@@ -1,0 +1,711 @@
+{
+  "common": {
+    "appName": "Kalahamoon",
+    "appDescription": "AI-powered commerce workspace for products, conversations, leads, orders, and marketplace channels.",
+    "appSlogan": "Kalahamoon — Omnichannel Sales CRM",
+    "appSloganDescription": "Unify products, marketplace channels, conversations, leads, and orders in one Kalahamoon workspace.",
+    "welcome": "Welcome",
+    "logout": "Logout",
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "loginWithBasalam": "Continue with Basalam",
+    "basalamLoginDescription": "Sign in securely with your Basalam account.",
+    "basalamLoginFailed": "Could not sign in with Basalam. Please try again.",
+    "orContinueWith": "or",
+    "backToLogin": "Back to login",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "refresh": "Refresh",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "noResults": "No results found",
+    "notSet": "-",
+    "salesManagementSystem": "Store Management Platform",
+    "invalidCredentials": "Invalid email or password",
+    "errorOccurred": "An error occurred. Please try again.",
+    "serverErrorWithStatus": "Server error: {status}",
+    "signup": "Create account",
+    "fullName": "Full name",
+    "fullNamePlaceholder": "Your name",
+    "organizationName": "Company or organization",
+    "organizationNamePlaceholder": "Your company name",
+    "passwordMinLength": "At least 8 characters",
+    "createAccount": "Create account",
+    "alreadyHaveAccount": "Already have an account?",
+    "noAccount": "Don't have an account?",
+    "accountCreated": "Account created. You can log in now.",
+    "emailFromInvitation": "This email is set by your invitation and cannot be changed.",
+    "acceptTeamInvite": "Accept team invitation",
+    "joinOrganization": "Join organization",
+    "joinOrgTitle": "Join {organization}",
+    "invitedWithRole": "You have been invited with the role of {role}.",
+    "invitedToJoin": "You have been invited to join this organization.",
+    "startTrialPlan": "Start {plan} trial",
+    "signupTrialPlan": "Create {plan} trial account",
+    "trialStartsAfterSignup": "Your trial starts immediately after creating your account, and this plan will be pre-selected for onboarding and billing.",
+    "loadingInviteDetails": "Loading invite details...",
+    "emailPlaceholder": "you@company.com",
+    "demoEmail": "Email: admin@kalahamoon.com",
+    "demoPassword": "Password: (set via seed variables)",
+    "trialEndedBanner": "Your trial has ended.",
+    "trialEndingSoonBanner": "Your trial ends on {date}. Upgrade to continue without interruption.",
+    "trialEndingSoonDaysBanner": "Your organization trial ends in {count} {count, plural, one {day} other {days}}.",
+    "trialEndedUpgrade": "Upgrade to continue",
+    "trialExpiredBannerMessage": "Your organization trial has ended. Open billing to choose a paid plan and resume service.",
+    "openBilling": "Open Billing",
+    "trialEndedBlockDescription": "Upgrade your plan or manage your organization to continue using the app.",
+    "organizationLink": "Organization",
+    "demoCredentials": "Demo Credentials:",
+    "footer": "Kalahamoon © 2026.",
+    "selectCountry": "Select country",
+    "selectUser": "Select user",
+    "unassigned": "Unassigned",
+    "pageNotFound": "Page Not Found",
+    "pageNotFoundDescription": "The page you are looking for does not exist or has been moved.",
+    "goToDashboard": "Go to Dashboard",
+    "goToLeads": "Go to Leads",
+    "back": "Back",
+    "na": "N/A",
+    "upgradeRequired": "Upgrade required",
+    "higherPlan": "a higher plan",
+    "marketplaceSyncPlanNotice": "Connecting multiple marketplaces is available on Growth and Pro plans.",
+    "currency": "Toman",
+    "retry": "Retry"
+  },
+  "landingPage": {
+    "nav": {
+      "features": "Features",
+      "integrations": "Integrations",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "login": "Log in",
+      "startTrial": "Start {days}-Day Trial"
+    },
+    "hero": {
+      "badge": "Store Management Platform",
+      "titleLine1": "Sell Smarter.",
+      "titleLine2": "Reply Faster.",
+      "titleAccent": "Own the Market.",
+      "description": "The AI-powered workspace that unifies WhatsApp, Telegram, Basalam, and Digikala into one focused inbox. Reply faster, qualify leads, and keep the whole team on the same sales path.",
+      "primaryCta": "Start {days}-Day Free Trial",
+      "secondaryCta": "Contact Us",
+      "confidence": {
+        "trial": "{days}-day trial",
+        "channels": "Core channels included",
+        "setup": "Guided setup path"
+      }
+    },
+    "mockup": {
+      "tabs": {
+        "inbox": "Unified Inbox",
+        "analytics": "Analytics"
+      },
+      "searchPlaceholder": "Search conversations...",
+      "chat1": {
+        "name": "Ali Ghavami",
+        "time": "Just now",
+        "message": "How much is the shipping?"
+      },
+      "chat2": {
+        "name": "Maryam",
+        "time": "10m ago",
+        "message": "Product received, thanks!"
+      },
+      "chat3": {
+        "name": "Saeed",
+        "time": "1h ago",
+        "message": "Do you have the red one?"
+      },
+      "activeConversation": {
+        "name": "Ali Ghavami",
+        "status": "WhatsApp Customer",
+        "action": "Mark as Won"
+      },
+      "dayLabel": "Today",
+      "inboundMessage": "How much is the shipping to Tehran?",
+      "autoReplyLabel": "Auto-Replied by AI",
+      "autoReplyMessage": "Shipping to Tehran is completely free for orders over 500k Toman! For standard orders, it's a flat rate of 35k Toman. Would you like to proceed with your order?",
+      "composerPlaceholder": "Type a message..."
+    },
+    "proof": {
+      "title": "Built on launch-ready foundations",
+      "description": "No vanity counters here. We focus on the core safeguards that make the workspace trustworthy for real teams.",
+      "cards": {
+        "workspace": {
+          "title": "One workspace for core channels",
+          "description": "WhatsApp, Telegram, Basalam, and Digikala conversations can be managed from the same organization workspace."
+        },
+        "admin": {
+          "title": "Admin-controlled operations",
+          "description": "AI settings, billing, and team access are scoped to the organization and reserved for trusted admin roles."
+        },
+        "invites": {
+          "title": "Invite-based team onboarding",
+          "description": "Teams join through organization invites, keeping launch billing and access centered on a single org model."
+        }
+      }
+    },
+    "integrations": {
+      "title": "Supported integrations",
+      "description": "Connect your messaging and marketplace channels to manage all customer conversations from one unified inbox.",
+      "channels": {
+        "whatsapp": "WhatsApp",
+        "telegram": "Telegram",
+        "basalam": "Basalam",
+        "instagram": "Instagram",
+        "digikala": "Digikala",
+        "bale": "Bale"
+      }
+    },
+    "features": {
+      "cards": {
+        "inbox": {
+          "title": "Unified Inbox",
+          "description": "Stop switching tabs. Manage all conversations from WhatsApp and Basalam in one high-performance interface."
+        },
+        "ai": {
+          "title": "AI Sales Assistant",
+          "description": "Let AI qualify leads, answer pricing questions, and handle repetitive FAQs while you sleep."
+        },
+        "pipeline": {
+          "title": "Visual Pipeline",
+          "description": "Drag and drop leads through your sales funnel. Track revenue and team performance in real-time."
+        }
+      }
+    },
+    "pricing": {
+      "title": "Transparent organization pricing",
+      "description": "Start with a {days}-day trial, then choose the plan that matches your operating volume. Billing is applied per organization, with one shared workspace and subscription per team.",
+      "reassurance": "Try the shared workspace for {days} days before choosing a paid plan",
+      "perMonth": "/month",
+      "startTrial": "Start free trial",
+      "selectPlan": "Choose this plan",
+      "discountedPlanPrice": "{plan} offer with {percent}% off",
+      "choosePlan": "Choose {plan} plan",
+      "mostPopular": "Recommended",
+      "plans": {
+        "starter": {
+          "title": "Starter",
+          "description": "For solo operators and early-stage teams that need one reliable multichannel workspace.",
+          "bestFor": "Best for founders getting their first repeatable sales workflow in place.",
+          "features": {
+            "feature1": "1 organization workspace",
+            "feature2": "WhatsApp, Telegram, and marketplace inbox",
+            "feature3": "Core AI assistant and automation coverage",
+            "feature4": "Role-based access and onboarding checklist"
+          }
+        },
+        "growth": {
+          "title": "Growth",
+          "description": "For growing teams that need faster handoffs, more automation, and clearer oversight.",
+          "bestFor": "Best for multi-user teams running daily conversations across channels.",
+          "features": {
+            "feature1": "Everything in Starter",
+            "feature2": "Expanded automation and AI usage capacity",
+            "feature3": "Marketplace sync workflows for active catalogs",
+            "feature4": "Priority support for launch-stage operations"
+          }
+        },
+        "pro": {
+          "title": "Pro",
+          "description": "For high-volume organizations that need more control, throughput, and operational guardrails.",
+          "bestFor": "Best for mature sales ops with stricter workflow and support requirements.",
+          "features": {
+            "feature1": "Everything in Growth",
+            "feature2": "Higher operational capacity across the workspace",
+            "feature3": "Advanced support and rollout coordination",
+            "feature4": "Designed for high-volume organization billing"
+          }
+        }
+      }
+    },
+    "demo": {
+      "kicker": "Talk to the launch team",
+      "titleLead": "Have",
+      "titleAccent": "Questions?",
+      "titleTail": "Get in Touch",
+      "description": "Send us a message and our team will help you map the right setup path for your channels, team, and first sales workflow.",
+      "benefits": {
+        "onboarding": {
+          "title": "Personalized Onboarding",
+          "description": "Custom setup tailored to your specific marketplaces and tools."
+        },
+        "aiStrategy": {
+          "title": "AI Logic Strategy",
+          "description": "We'll help you define the right AI persona for your brand."
+        }
+      },
+      "form": {
+        "fullName": "Full Name",
+        "fullNamePlaceholder": "Enter your full name",
+        "email": "Email Address",
+        "emailPlaceholder": "Enter your email address",
+        "company": "Company",
+        "companyPlaceholder": "Company Name",
+        "help": "How can we help?",
+        "helpPlaceholder": "Tell us about your needs...",
+        "submit": "Send Message",
+        "submitting": "Sending...",
+        "success": "Message sent! We will contact you soon.",
+        "error": "Something went wrong. Please try again."
+      }
+    },
+    "stats": {
+      "title": "Trusted by growing sales teams",
+      "channels": {
+        "value": "6",
+        "label": "Channels Connected",
+        "sub": "WhatsApp, Telegram & more"
+      },
+      "responseTime": {
+        "value": "< 30s",
+        "label": "Avg. Response Time",
+        "sub": "With AI auto-reply"
+      },
+      "stages": {
+        "value": "9",
+        "label": "Pipeline Stages",
+        "sub": "Full sales funnel"
+      },
+      "uptime": {
+        "value": "99.9",
+        "label": "% Uptime",
+        "sub": "Always available"
+      }
+    },
+    "showcase": {
+      "integrations": {
+        "label": "Channel Integrations",
+        "title": "Connect all channels in seconds.",
+        "description": "Directly link your messaging platforms and marketplaces. Automated sync of messages, orders, and products without any coding.",
+        "status": "Connection Status",
+        "connected": "Connected & Active",
+        "syncing": "Syncing...",
+        "testConnection": "Test Connection",
+        "channels": {
+          "whatsapp": {
+            "name": "WhatsApp",
+            "desc": "Grey Route & Meta Business API",
+            "stat": "12 messages synced today"
+          },
+          "telegram": {
+            "name": "Telegram",
+            "desc": "Dedicated messaging bot",
+            "stat": "24 messages synced today"
+          },
+          "basalam": {
+            "name": "Basalam",
+            "desc": "Store & order synchronization",
+            "stat": "15 products updated"
+          },
+          "digikala": {
+            "name": "Digikala",
+            "desc": "Seller panel & orders",
+            "stat": "8 new orders fetched"
+          }
+        }
+      },
+      "inbox": {
+        "label": "Unified Inbox",
+        "title": "Every conversation. One inbox.",
+        "description": "WhatsApp, Telegram, Basalam, and Digikala messages all flow into a single, blazing-fast workspace. No more tab-switching.",
+        "notification": "New message from WhatsApp",
+        "filter": "All Channels",
+        "messages": {
+          "m1": {
+            "name": "Sara Mohammadi",
+            "channel": "WhatsApp",
+            "text": "Is the blue model in stock?",
+            "time": "Just now"
+          },
+          "m2": {
+            "name": "Reza Karimi",
+            "channel": "Basalam",
+            "text": "Order #4521 shipped yet?",
+            "time": "2m ago"
+          },
+          "m3": {
+            "name": "Nima Pourmohammad",
+            "channel": "Telegram",
+            "text": "What's the warranty?",
+            "time": "5m ago"
+          },
+          "m4": {
+            "name": "Mina Dehghani",
+            "channel": "Digikala",
+            "text": "Can I return this?",
+            "time": "8m ago"
+          }
+        }
+      },
+      "ai": {
+        "label": "AI Sales Assistant",
+        "title": "Your AI never sleeps.",
+        "description": "Smart auto-replies, intent detection, and lead qualification — all running 24/7 so you close more deals while you sleep.",
+        "customerMsg": "How much is shipping to Shiraz?",
+        "thinking": "Analyzing intent...",
+        "intentBuying": "Shipping Inquiry",
+        "intentLocation": "Shiraz",
+        "aiReply": "Shipping to Shiraz is free for orders over 300k Toman. Standard shipping is 25k Toman and takes 2-3 business days. Would you like to place an order?",
+        "suggestAction1": "Create Order",
+        "suggestAction2": "Add to Pipeline"
+      },
+      "pipeline": {
+        "label": "Visual Pipeline",
+        "title": "See every deal at a glance.",
+        "description": "Drag leads through a 9-stage funnel. Track revenue, monitor velocity, and never let a deal slip through the cracks.",
+        "stages": {
+          "new": "New",
+          "qualified": "Qualified",
+          "proposal": "Proposal",
+          "negotiation": "Negotiation",
+          "won": "Won"
+        },
+        "deals": {
+          "d1": {
+            "name": "Laptop Pro X",
+            "value": "4.2M"
+          },
+          "d2": {
+            "name": "Office Suite",
+            "value": "1.8M"
+          },
+          "d3": {
+            "name": "Server Setup",
+            "value": "12M"
+          },
+          "d4": {
+            "name": "Bulk Phones",
+            "value": "8.5M"
+          }
+        },
+        "totalValue": "Total Pipeline Value",
+        "totalAmount": "26.5M T"
+      },
+      "automation": {
+        "label": "Smart Automation",
+        "title": "Set rules. Let them run.",
+        "description": "Build powerful workflows triggered by messages, stage changes, or time-based events. Your CRM works while you don't.",
+        "trigger": "Message Received",
+        "condition": "Contains \"price\"",
+        "action": "Send Price List",
+        "ruleActive": "Rule Active",
+        "executionsToday": "47 executions today"
+      }
+    },
+    "integrations2": {
+      "title": "Connected to your ecosystem",
+      "description": "One hub, all your channels. Messages and orders from every platform flow into Kalahamoon automatically.",
+      "flowLabel": "Unified channel flow"
+    },
+    "finalCta": {
+      "kicker": "Your {days}-day trial is the next step",
+      "title": "Ready to sell smarter?",
+      "description": "Start from the same workflow you just reviewed: connect channels, centralize conversations, let AI handle repetitive replies, and move qualified leads through one shared pipeline.",
+      "cta": "Start Free Trial",
+      "reassurance": "No credit-card step is required to explore the workspace."
+    },
+    "howItWorks": {
+      "label": "How It Works",
+      "title": "Up and running in minutes",
+      "description": "No complex setup. Connect your channels, manage conversations, and grow — all from one workspace.",
+      "steps": {
+        "s1": {
+          "number": "01",
+          "title": "Connect Your Channels",
+          "description": "Link WhatsApp, Telegram, Basalam, and Digikala in a few clicks. Your messages start flowing in instantly."
+        },
+        "s2": {
+          "number": "02",
+          "title": "Manage From One Inbox",
+          "description": "All customer conversations appear in a single, fast workspace. No more tab-switching or missed messages."
+        },
+        "s3": {
+          "number": "03",
+          "title": "Grow With AI",
+          "description": "Let the AI assistant qualify leads, answer FAQs, and close deals — even while you sleep."
+        }
+      }
+    },
+    "socialProof": {
+      "label": "What teams say",
+      "title": "Trusted by growing sales teams",
+      "description": "The proof block now reinforces what teams can actually use on day one: channels, automation, marketplaces, and a safe trial path.",
+      "trust": {
+        "channels": {
+          "value": "{count} core channels",
+          "label": "WhatsApp, Telegram, Basalam, and Digikala are part of the launch path."
+        },
+        "automation": {
+          "value": "AI-assisted replies",
+          "label": "Automate repetitive questions while keeping admins in control."
+        },
+        "marketplaces": {
+          "value": "Marketplace-ready",
+          "label": "Bring marketplace conversations into the same sales workspace."
+        },
+        "trial": {
+          "value": "{days}-day trial",
+          "label": "Evaluate the workspace before committing to a paid plan."
+        }
+      },
+      "testimonials": {
+        "t1": {
+          "quote": "Since switching to Kalahamoon, our response time dropped from hours to under 30 seconds. The AI handles 70% of inquiries automatically.",
+          "name": "Amir Hosseini",
+          "role": "Sales Lead",
+          "company": "Torob Partner"
+        },
+        "t2": {
+          "quote": "Managing Basalam, Digikala, and WhatsApp from one inbox is a game-changer. We closed 40% more deals in the first month.",
+          "name": "Leila Ahmadi",
+          "role": "Founder",
+          "company": "TechStore Online"
+        },
+        "t3": {
+          "quote": "The pipeline and automation features replaced three separate tools. Our team is now running the whole sales process from a single screen.",
+          "name": "Reza Karimi",
+          "role": "Operations Manager",
+          "company": "MegaShop"
+        }
+      }
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Common questions answered",
+      "items": {
+        "q1": {
+          "q": "Is there a free trial? Do I need a credit card?",
+          "a": "Yes — every plan comes with a 14-day free trial. No credit card required to start. Cancel anytime."
+        },
+        "q2": {
+          "q": "Which channels are supported?",
+          "a": "WhatsApp, Telegram, Basalam, Digikala, and Bale. More integrations are added regularly based on customer demand."
+        },
+        "q3": {
+          "q": "How does the AI assistant work?",
+          "a": "The AI reads incoming messages, detects intent (pricing, shipping, returns, etc.), and sends pre-configured replies automatically. You control what it says and when."
+        },
+        "q4": {
+          "q": "Can multiple team members use the same account?",
+          "a": "Yes. All plans support multiple users with role-based access. Invite your team, assign conversations, and track performance together."
+        },
+        "q5": {
+          "q": "Is my data secure?",
+          "a": "All data is encrypted in transit and at rest. We never sell or share your data with third parties."
+        },
+        "q6": {
+          "q": "Can I change my plan later?",
+          "a": "Absolutely. Upgrade or downgrade at any time from Settings → Billing. Changes take effect immediately."
+        }
+      }
+    },
+    "stickyBar": {
+      "cta": "Start Free Trial",
+      "sub": "14 days free · No credit card"
+    },
+    "easterEgg": {
+      "hint": "Psst — click the × to unlock a surprise offer"
+    },
+    "footer": {
+      "legal": "© 2026 Kalahamoon. All rights reserved.",
+      "tagline": "AI-powered CRM for modern sales teams.",
+      "product": "Product",
+      "company": "Company",
+      "legal_col": "Legal",
+      "features": "Features",
+      "pricing": "Pricing",
+      "login": "Log in",
+      "getStarted": "Get Started",
+      "support": "Support",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact",
+      "trustSealBadge": "Verified",
+      "trustSealTitle": "Official eNamad trust seal",
+      "trustSealDescription": "Open the live trust seal issued for Kalahamoon by Iran's e-commerce trust center.",
+      "trustSealCta": "View certificate",
+      "trustSealAria": "View Kalahamoon eNamad trust seal"
+    }
+  },
+  "legal": {
+    "backToHome": "Back to Home",
+    "privacy": {
+      "title": "Privacy Policy for the Kalahamoon Browser Extension",
+      "lastUpdated": "Last updated: June 2026",
+      "sections": {
+        "intro": {
+          "title": "Scope",
+          "content": "This Privacy Policy explains how the Kalahamoon Browser Extension collects, uses, and protects information when you install or use the extension on supported websites. It applies specifically to the extension and its related Kalahamoon services used to authenticate your account, process product captures, and deliver requested features."
+        },
+        "collect": {
+          "title": "Information We Access",
+          "content": "The extension may access the active page, selected product links, page content, images, prices, product descriptions, variants, and technical page signals required to identify supported marketplaces and extract product information at your request. If you sign in, Kalahamoon also stores account and session data needed to keep the extension connected to your workspace."
+        },
+        "use": {
+          "title": "How We Use Information",
+          "content": "We use this information only to provide extension features such as detecting supported stores, extracting product data, checking duplicate captures, sending products to destinations you configure, generating affiliate links where available, and maintaining account access, security, and operational reliability. We do not use captured product data for advertising or unrelated profiling."
+        },
+        "sharing": {
+          "title": "How Information Is Shared",
+          "content": "We do not sell personal information. Information is shared only when necessary to operate the extension, such as with Kalahamoon backend services, destination platforms you explicitly connect or choose for product export, and service providers that support secure hosting and delivery of the service."
+        },
+        "security": {
+          "title": "Permissions and Security",
+          "content": "The extension requests browser permissions such as active tab access, supported site access, storage, context menus, notifications, scripting, clipboard write, tabs, identity, and alarms solely to enable its documented features. We apply reasonable technical and organizational safeguards, including authenticated access controls and encrypted network transmission where supported, to help protect stored and transmitted data."
+        },
+        "rights": {
+          "title": "Your Choices and Rights",
+          "content": "You can stop collection by disabling or uninstalling the extension at any time. You can also disconnect your Kalahamoon account, remove stored browser data through your browser settings, and contact us to request access, correction, or deletion of personal information associated with your account, subject to legal and operational requirements."
+        },
+        "contact": {
+          "title": "Data We Do Not Intentionally Collect and Contact",
+          "content": "The extension is not designed to collect unrelated personal messages, passwords, payment card details, or private form input unless that information is part of product content you intentionally ask the extension to process on a supported page. If you have questions, requests, or concerns about this policy, contact us at support@kalahamoon.com or through https://kalahamoon.com."
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: April 2026",
+      "sections": {
+        "acceptance": {
+          "title": "Acceptance of Terms",
+          "content": "By accessing or using Kalahamoon, you agree to be bound by these terms. If you do not agree, please do not use our services."
+        },
+        "services": {
+          "title": "Our Services",
+          "content": "Kalahamoon provides an AI-powered CRM platform for sales teams, including unified messaging, pipeline management, and automation tools."
+        },
+        "accounts": {
+          "title": "User Accounts",
+          "content": "You are responsible for maintaining the security of your account. You must provide accurate information and keep your credentials confidential."
+        },
+        "usage": {
+          "title": "Acceptable Use",
+          "content": "You agree to use our platform in compliance with all applicable laws and regulations. You may not use the service for any unlawful purpose."
+        },
+        "payment": {
+          "title": "Billing & Payments",
+          "content": "Paid plans are billed according to the pricing displayed at the time of purchase. All fees are non-refundable unless otherwise stated."
+        },
+        "termination": {
+          "title": "Termination",
+          "content": "We reserve the right to suspend or terminate accounts that violate these terms. You may cancel your account at any time."
+        },
+        "liability": {
+          "title": "Limitation of Liability",
+          "content": "Kalahamoon is provided on an \"as is\" basis. We are not liable for any indirect, incidental, or consequential damages arising from your use of the platform."
+        }
+      }
+    },
+    "support": {
+      "title": "Support",
+      "subtitle": "We're here to help",
+      "emailLabel": "Email Us",
+      "email": "support@kalahamoon.com",
+      "responseTime": "We typically respond within 24 hours",
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": {
+          "q": "How do I connect my WhatsApp?",
+          "a": "Go to Settings > Integrations > WhatsApp and follow the setup wizard to connect your WhatsApp Business account."
+        },
+        "q2": {
+          "q": "Can I change my plan?",
+          "a": "Yes, you can upgrade or downgrade your plan at any time from Settings > Billing."
+        },
+        "q3": {
+          "q": "How does the AI assistant work?",
+          "a": "The AI assistant automatically responds to customer messages based on your knowledge base and configured rules."
+        }
+      }
+    }
+  },
+  "pricingPage": {
+    "backToHome": "← Back",
+    "login": "Log in",
+    "startTrial": "Start {days}-day trial",
+    "eyebrow": "Pricing",
+    "title": "Enterprise pricing for sales teams",
+    "descriptionLead": "Start with a {days}-day trial, then choose Starter, Growth, or Pro from the billing page after login.",
+    "descriptionTail": "All paid plans include multilingual support and role-based permissions.",
+    "perMonth": "per month",
+    "choosePlan": "Choose {plan} plan",
+    "contactLeadIn": "Need rollout help or a custom commercial agreement? Contact"
+  },
+  "extensionPage": {
+    "metaTitle": "Kalahamoon Browser Extension",
+    "login": "Log in",
+    "dashboard": "Open dashboard",
+    "eyebrow": "Browser extension",
+    "status": "Chrome Web Store: coming soon",
+    "title": "Install Kalahamoon Extension manually today",
+    "description": "Capture products from supported marketplaces, review the extracted data, and send it to WooCommerce, Shopify, Basalam, or your clipboard while the Chrome Web Store listing is being finalized.",
+    "manualCta": "Download Chrome package",
+    "manualHint": "Use this file with Chrome's Load unpacked flow after extracting it on your computer.",
+    "storeCta": "Chrome Web Store coming soon",
+    "storeHint": "The public listing is not live yet. Manual installation is the supported path for now.",
+    "visualTitle": "Marketplace capture cockpit",
+    "visualSubtitle": "Right-click a product, review the extraction, then push it to your commerce stack.",
+    "visualBadge": "Manual install ready",
+    "browserChrome": "Chrome",
+    "browserFirefox": "Firefox package available soon",
+    "comingSoonShort": "soon",
+    "supportedDestinations": "WooCommerce · Shopify · Basalam · Clipboard",
+    "installTitle": "Manual Chrome installation",
+    "installLead": "This is the first supported installation path until the Chrome Web Store review is complete.",
+    "steps": {
+      "download": {
+        "title": "Download and extract",
+        "description": "Download the Chrome package, unzip it, and keep the extracted folder somewhere stable. Chrome reads the extension directly from this folder."
+      },
+      "developerMode": {
+        "title": "Open Chrome Extensions",
+        "description": "Go to chrome://extensions and turn on Developer mode from the top corner of the page."
+      },
+      "loadUnpacked": {
+        "title": "Load unpacked folder",
+        "description": "Click Load unpacked and select the extracted dist folder. Pin the extension from Chrome's toolbar for quicker access."
+      },
+      "configure": {
+        "title": "Configure destinations",
+        "description": "Open the extension settings, enable the destinations you use, and add your WooCommerce, Shopify, Basalam, or clipboard settings."
+      }
+    },
+    "featureTitle": "What it gives your team",
+    "features": {
+      "capture": "Capture product data from supported marketplace pages without copy-pasting.",
+      "review": "Open a clean review screen before pushing any product into another channel.",
+      "route": "Send products to WooCommerce, Shopify, Basalam API, or clipboard output.",
+      "control": "Keep destinations disabled until their credentials are configured correctly."
+    },
+    "comingSoonTitle": "Chrome Web Store release",
+    "comingSoonDescription": "The Chrome Web Store listing is being prepared. Once approved, this page will switch the main action to one-click store installation while keeping manual setup as a backup path.",
+    "faqTitle": "Installation notes",
+    "faq": {
+      "safe": {
+        "q": "Is manual installation temporary?",
+        "a": "Yes. It is the recommended path only while the Chrome Web Store listing is pending."
+      },
+      "update": {
+        "q": "How do updates work?",
+        "a": "Download the newer package, replace the extracted folder, then press Reload on chrome://extensions."
+      },
+      "where": {
+        "q": "Which folder should I choose?",
+        "a": "Choose the extracted Chrome build folder, normally named dist, not the zip file itself."
+      }
+    }
+  }
+}
