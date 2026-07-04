@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { isLocale, locales, translate } from "../../lib/i18n";
+import { getDirection, isLocale, locales, translate } from "../../lib/i18n";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -39,5 +39,13 @@ export default async function LocaleLayout({
     return null;
   }
 
-  return <div className={rawLocale === "fa" ? "font-vazirmatn" : "font-sans"}>{children}</div>;
+  const direction = getDirection(rawLocale);
+
+  return (
+    <html lang={rawLocale} dir={direction} className="dark" suppressHydrationWarning>
+      <body className={`${rawLocale === "fa" ? "font-vazirmatn" : "font-sans"} bg-background text-foreground antialiased`}>
+        {children}
+      </body>
+    </html>
+  );
 }
