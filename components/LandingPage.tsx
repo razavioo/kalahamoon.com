@@ -1095,9 +1095,9 @@ function AutomationPanel({ t, prefersReduced, isRTL, discountUnlocked }: {
 
   const activeScenario = scenarios.find((scenario) => scenario.id === activeScenarioId) ?? scenarios[0];
   const sectionLabels = {
-    trigger: isRTL ? 'رویداد محرک' : tAutomationDetail('trigger'),
-    conditions: isRTL ? 'شرایط' : tAutomationDetail('conditions'),
-    actions: isRTL ? 'اقدامات' : tAutomationDetail('actions'),
+    trigger: tAutomationDetail('trigger'),
+    conditions: tAutomationDetail('conditions'),
+    actions: tAutomationDetail('actions'),
   };
 
   const nodes = [
