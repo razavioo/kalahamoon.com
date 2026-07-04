@@ -77,8 +77,8 @@ export default function PublicFooter({ locale, variant = 'large' }: PublicFooter
             <p className="text-xs font-mono font-semibold tracking-wider uppercase text-white/40 mb-1">{t('footer.product')}</p>
             <Link href={`/${locale}#features`} className="text-sm text-white/65 hover:text-white transition-colors">{t('footer.features')}</Link>
             <Link href={`/${locale}/pricing`} className="text-sm text-white/65 hover:text-white transition-colors">{t('footer.pricing')}</Link>
-            <Link href={`${process.env.NEXT_PUBLIC_APP_URL || ''}/${locale}/login`} className="text-sm text-white/65 hover:text-white transition-colors">{t('footer.login')}</Link>
-            <Link href={`${process.env.NEXT_PUBLIC_APP_URL || ''}/${locale}/signup`} className="text-sm text-white/65 hover:text-white transition-colors">{t('footer.getStarted')}</Link>
+            <Link href={`${process.env.NEXT_PUBLIC_RUNTIME_APP_URL || process.env.NEXT_PUBLIC_APP_URL || 'https://app.kalahamoon.com'}/${locale}/login`} className="text-sm text-white/65 hover:text-white transition-colors">{t('footer.login')}</Link>
+            <Link href={`${process.env.NEXT_PUBLIC_RUNTIME_APP_URL || process.env.NEXT_PUBLIC_APP_URL || 'https://app.kalahamoon.com'}/${locale}/signup`} className="text-sm text-white/65 hover:text-white transition-colors">{t('footer.getStarted')}</Link>
           </div>
 
           {/* Legal */}

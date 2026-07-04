@@ -148,7 +148,7 @@ function IntegrationsPanel({ t, prefersReduced, locale }: {
                 <p className="mt-1.5 text-xs font-semibold text-white/70 leading-relaxed">{activeData.stat}</p>
               </div>
 
-              <div className="rounded-none border border-white/5 bg-white/[0.01] p-3 font-mono text-[11px] text-white/45 space-y-1">
+              <div className="rounded-none border border-white/5 bg-white/[0.01] p-3 font-mono text-[11px] text-white/45 space-y-1 text-left" dir="ltr">
                 <div>URL: https://api.kalahamoon.com/v1/sync/{activeData.id}</div>
                 <div>METHOD: POST (Webhook Live)</div>
                 <div>SECURE: SSL/TLS Enabled</div>
@@ -313,7 +313,6 @@ function SlidableFeatures({
                 }`}
               >
                 <div className="flex items-center gap-2.5">
-                  <span className="font-mono text-xs opacity-60">{formatNum(idx + 1)}</span>
                   <Icon className="w-4 h-4" />
                   <span className="font-mono text-xs font-semibold tracking-wider uppercase truncate">
                     {slide.label}
@@ -331,10 +330,7 @@ function SlidableFeatures({
         <div className="flex flex-col justify-between rounded-none border border-white/10 bg-[#151413]/65 p-6 ring-1 ring-white/[0.02]">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-none border text-[10px] font-mono font-bold uppercase tracking-wider ${activeStyles.border} ${activeStyles.bg} ${activeStyles.text}`}>
-                {formatNum(activeSlide + 1)} / {formatNum(slides.length)}
-              </span>
-              <span className="font-mono text-[10px] text-white/30 tracking-widest uppercase">
+              <span className="font-mono text-[10px] text-accent-400 tracking-widest uppercase">
                 {currentSlide.id}
               </span>
             </div>
@@ -358,12 +354,6 @@ function SlidableFeatures({
             >
               <ArrowRight className={`h-4 w-4 transition-transform ${isRTL ? '' : 'rotate-180 group-hover:-translate-x-0.5'}`} />
             </button>
-            
-            <div className="font-mono text-xs text-white/40 tracking-wider">
-              <span className="text-white font-bold">{formatNum(activeSlide + 1)}</span>
-              <span className="mx-1">/</span>
-              <span>{formatNum(slides.length)}</span>
-            </div>
 
             <button
               onClick={handleNext}
@@ -487,7 +477,7 @@ function NavBar({ locale, t, tCommon, localizedTrialDays }: {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
   useMotionValueEvent(scrollY, 'change', (v) => setScrolled(v > 50));
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL || '';
+  const appUrl = process.env.NEXT_PUBLIC_RUNTIME_APP_URL || process.env.NEXT_PUBLIC_APP_URL || 'https://app.kalahamoon.com';
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 px-4 transition-all duration-300" style={{ paddingTop: scrolled ? 6 : 14, paddingBottom: scrolled ? 6 : 14 }}>
@@ -534,7 +524,7 @@ function HeroSection({ locale, t, isRTL, localizedTrialDays }: {
             <div className="mb-4 inline-flex items-center gap-2 rounded-none border border-accent-400/25 bg-accent-400/10 px-3 py-1 text-[11px] font-bold text-accent-100">
               <span className="h-px w-4 bg-accent-300" aria-hidden="true" /> {t('hero.badge')}
             </div>
-            <h1 className="mb-4 text-3xl font-black leading-tight tracking-tight md:text-5xl lg:text-6xl">
+            <h1 className={`mb-4 text-3xl font-black leading-tight md:text-5xl lg:text-6xl ${isRTL ? '' : 'tracking-tight'}`}>
               <span className="text-white">{t('hero.titleLine1')}</span>{' '}
               <span className="text-white/80">{t('hero.titleLine2')}</span>{' '}
               <span className="font-display font-semibold text-accent-200">{t('hero.titleAccent')}</span>
@@ -575,10 +565,8 @@ function HeroSection({ locale, t, isRTL, localizedTrialDays }: {
           <div className="relative mx-auto w-full max-w-2xl lg:max-w-none">
             {/* Elegant double-border editorial frame with Clay Terracotta accent */}
             <div className="relative overflow-hidden rounded-none border border-white/10 bg-[#151413]/72 p-3 shadow-[0_24px_100px_rgba(0,0,0,0.35)] ring-1 ring-white/[0.03]">
-              {/* Monospace accent tag */}
-              <div className="flex justify-between items-center mb-3 text-[9px] font-mono tracking-widest text-white/40 uppercase">
-                <span>01 / System Preview</span>
-                <span className="text-accent-400">Omnichannel Inbox</span>
+              <div className="flex justify-between items-center mb-3 text-[9px] font-mono tracking-widest text-accent-400 uppercase">
+                <span>Omnichannel Inbox</span>
               </div>
               <div className="relative aspect-[16/10] overflow-hidden border border-white/5 bg-black/40">
                 <Image
@@ -692,10 +680,10 @@ function InboxPanel({ t, prefersReduced, locale, discountUnlocked }: {
           <div>
             <div className="flex items-center justify-between gap-3">
               <div>
-                <div className="text-xs font-bold text-white/30">Preview</div>
+                <div className="text-xs font-bold text-white/30 text-left" dir="ltr">Preview</div>
                 <div className="mt-1 text-lg font-black text-white">{activeMessage.name}</div>
               </div>
-              <div className={`inline-flex items-center gap-1 rounded-none px-2 py-1 text-[10px] font-bold ${activeMessage.chColor}`}>{activeMessage.chIcon}{activeMessage.ch}</div>
+              <div className={`inline-flex items-center gap-1 rounded-none px-2 py-1 text-[10px] font-bold ${activeMessage.chColor}`} dir="ltr">{activeMessage.chIcon}{activeMessage.ch}</div>
             </div>
             <div className="mt-4 rounded-none border border-white/8 bg-[#151413]/70 p-4 text-sm leading-7 text-white/70">
               {activeMessage.text}
@@ -756,7 +744,7 @@ function AIPanel({ t, prefersReduced, locale, discountUnlocked }: {
       </div>
 
       <div className="rounded-none border border-white/8 bg-[#151413]/60 overflow-hidden">
-        <div className="h-10 border-b border-white/5 flex items-center px-4 gap-3 bg-white/[0.03]">
+        <div className="h-10 border-b border-white/5 flex items-center px-4 gap-3 bg-white/[0.03] text-left" dir="ltr">
           <div className="flex items-center gap-2 text-[11px] font-semibold text-info">
             <span className="h-px w-4 bg-info" aria-hidden="true" /> AI Assistant
           </div>
@@ -766,7 +754,7 @@ function AIPanel({ t, prefersReduced, locale, discountUnlocked }: {
         </div>
 
         <div className="grid gap-4 p-5 xl:grid-cols-[0.72fr_1.28fr]">
-          <div className="rounded-none border border-white/8 bg-black/20 p-4">
+          <div className="rounded-none border border-white/8 bg-black/20 p-4 text-left" dir="ltr">
             <div className="text-xs font-bold text-white/30">Intent Stack</div>
             <div className="mt-4 flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-1 rounded-none border border-info/15 bg-info/10 px-2 py-1 text-[10px] font-bold text-info"><Zap className="w-3 h-3" /> {t('showcase.ai.intentBuying')}</span>
@@ -992,7 +980,7 @@ function PipelinePanel({ t, prefersReduced, discountUnlocked }: {
                         <GripVertical className="w-3 h-3 text-white/10 group-hover:text-white/20 transition-colors" />
                       </div>
                       <span className={`text-[11px] font-bold ${meta.text}`}>{deal.value}</span>
-                      <div className="mt-2 text-[10px] text-white/30">drag & drop</div>
+                      <div className="mt-2 text-[10px] text-white/30 text-left" dir="ltr">drag & drop</div>
                     </motion.div>
                   ))}
                 </div>
