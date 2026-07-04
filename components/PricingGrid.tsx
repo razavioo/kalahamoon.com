@@ -10,9 +10,9 @@ interface StaticPlan {
 }
 
 const plans: StaticPlan[] = [
-  { key: "starter", plan: "STARTER", price: { en: "$29", fa: "۲,۹۰۰,۰۰۰ تومان" } },
-  { key: "growth", plan: "GROWTH", price: { en: "$79", fa: "۷,۹۰۰,۰۰۰ تومان" }, highlighted: true },
-  { key: "pro", plan: "PRO", price: { en: "$199", fa: "۱۹,۹۰۰,۰۰۰ تومان" } },
+  { key: "starter", plan: "STARTER", price: { en: "$29", fa: "۶۹۰,۰۰۰ تومان" } },
+  { key: "growth", plan: "GROWTH", price: { en: "$79", fa: "۲,۴۹۰,۰۰۰ تومان" }, highlighted: true },
+  { key: "pro", plan: "PRO", price: { en: "$199", fa: "۵,۹۹۰,۰۰۰ تومان" } },
 ];
 
 export function PricingGrid({ locale }: { locale: Locale }) {

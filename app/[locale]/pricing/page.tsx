@@ -19,7 +19,7 @@ export default async function PricingPage({
   const localizedTrialDays = formatNumber(trialDays, rawLocale);
 
   return (
-    <PublicChrome locale={rawLocale} compact>
+    <PublicChrome locale={rawLocale} compact hideExtensionLink>
       <section className="mx-auto max-w-7xl px-6 py-16 md:py-24">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <p className="font-mono text-xs font-bold uppercase tracking-[0.22em] text-accent-400">

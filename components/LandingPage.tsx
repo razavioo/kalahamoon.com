@@ -1355,7 +1355,7 @@ function PricingSection({ id, locale, t, plans, localizedTrialDays }: {
   id?: string; locale: string; t: ReturnType<typeof useTranslations>; plans: ReturnType<typeof getLocalizedPublicBillingPlans>; localizedTrialDays: string;
 }) {
   return (
-    <section id={id} className="scroll-mt-24 bg-[#121110] py-8 md:py-12 border-t border-b border-white/5">
+    <section id={id} className="scroll-mt-24 bg-[#121110] py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="relative overflow-hidden rounded-none border border-white/10 bg-[#151413]/55 px-5 py-8 ring-1 ring-white/[0.02] md:px-8 md:py-10">
           <div className="relative z-10">
@@ -1403,7 +1403,7 @@ function DemoSection({ t, locale }: {
 }) {
   return (
     <FadeIn>
-      <section id="contact" className="scroll-mt-24 bg-[#0d0d0c] py-8 md:py-12 border-t border-b border-white/5">
+      <section id="contact" className="scroll-mt-24 bg-[#0d0d0c] py-8 md:py-12">
         <div className="max-w-7xl mx-auto px-4 md:px-6">
           <div className="relative overflow-hidden rounded-none border border-white/10 bg-[#151413]/50 ring-1 ring-white/[0.02]">
             <div className="relative grid lg:grid-cols-2">
@@ -1486,7 +1486,7 @@ function DemoVisual({ locale }: { locale: string }) {
 /* ── Final CTA ── */
 function FinalCTA({ locale, t, isRTL, localizedTrialDays }: { locale: string; t: ReturnType<typeof useTranslations>; isRTL: boolean; localizedTrialDays: string }) {
   return (
-    <section className="bg-[#151413] py-8 md:py-12 border-t border-white/5">
+    <section className="bg-[#151413] py-8 md:py-12">
       <div className="mx-auto max-w-5xl px-4 md:px-6">
         <FadeIn>
           <div className="relative isolate overflow-hidden rounded-none border border-white/10 bg-[#151413]/55 px-6 py-10 text-center ring-1 ring-white/[0.02] md:px-10 md:py-12">

@@ -8,6 +8,7 @@ interface PublicChromeProps {
   locale: Locale;
   children: React.ReactNode;
   compact?: boolean;
+  hideExtensionLink?: boolean;
 }
 
 export function BrandMark({ className = "h-8 w-8" }: { className?: string }) {
@@ -22,7 +23,7 @@ export function BrandMark({ className = "h-8 w-8" }: { className?: string }) {
   );
 }
 
-export function PublicChrome({ locale, children, compact = false }: PublicChromeProps) {
+export function PublicChrome({ locale, children, compact = false, hideExtensionLink = false }: PublicChromeProps) {
   const appName = translate(locale, "common.appName");
 
   return (
@@ -47,9 +48,11 @@ export function PublicChrome({ locale, children, compact = false }: PublicChrome
             <Link href={publicHref(locale, "pricing")} className="font-mono text-xs font-bold uppercase text-white/55 hover:text-white">
               {translate(locale, "landingPage.nav.pricing")}
             </Link>
-            <Link href={publicHref(locale, "extension")} className="font-mono text-xs font-bold uppercase text-white/55 hover:text-white">
-              {translate(locale, "extensionPage.eyebrow")}
-            </Link>
+            {!hideExtensionLink && (
+              <Link href={publicHref(locale, "extension")} className="font-mono text-xs font-bold uppercase text-white/55 hover:text-white">
+                {translate(locale, "extensionPage.eyebrow")}
+              </Link>
+            )}
           </nav>
           <div className="flex shrink-0 items-center gap-2">
             <a

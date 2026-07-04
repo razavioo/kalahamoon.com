@@ -22,7 +22,7 @@ export function SocialProofSection({ locale, localizedTrialDays }: { locale: str
   ];
 
   return (
-    <section className="bg-[#1c1a19] py-8 md:py-12 border-t border-b border-white/5">
+    <section className="bg-[#1c1a19] py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
       <div className="mb-8 text-center">
         <span className="mb-4 inline-flex items-center gap-2 rounded-none border border-accent-400/20 bg-accent-400/10 px-3 py-1 text-[11px] font-bold text-accent-100">
