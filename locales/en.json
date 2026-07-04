@@ -707,5 +707,92 @@
         "a": "Choose the extracted Chrome build folder, normally named dist, not the zip file itself."
       }
     }
+  },
+  "billingCatalog": {
+    "note": "Billing is applied per organization, with one shared workspace and subscription per team.",
+    "freeTrial": "Free Trial",
+    "upgradeHints": {
+      "free": "Subscribe to Starter to unlock your inbox, pipeline, automations, and AI assistant.",
+      "starter": "Upgrade to Growth for marketplace sync, more automation capacity, and advanced AI controls.",
+      "growth": "Upgrade to Pro for higher workspace limits, more AI capacity, and premium support.",
+      "pro": "Your Pro plan includes the highest published workspace limits."
+    },
+    "limitLabels": {
+      "seats": "Team seats",
+      "activeAutomationRules": "Active automation rules",
+      "knowledgeEntries": "Knowledge base entries",
+      "aiConfigs": "AI connections",
+      "aiProductRewrites": "Product content credits",
+      "aiProductEnrichments": "Product enrichment credits",
+      "aiDuplicateChecks": "Duplicate checks",
+      "aiWebLookups": "Product research credits",
+      "aiImageGenerations": "Image generation credits",
+      "aiAssistantConversations": "Assistant conversations",
+      "aiSupportResolutions": "Support assistant credits",
+      "aiCampaignDrafts": "Campaign draft credits",
+      "aiReportNarratives": "Report narrative credits",
+      "marketplacesConnected": "Marketplace connections"
+    },
+    "featureSummary": {
+      "seats": "{count} team seats",
+      "activeAutomationRules": "{count} active automation rules",
+      "knowledgeEntries": "{count} knowledge base entries",
+      "aiConfigs": "{count} AI connections",
+      "marketplaceSync": "Marketplace sync workflows",
+      "crmCoreOnly": "CRM core, with 1 marketplace connection and SMS",
+      "premiumSupport": "Premium rollout support"
+    },
+    "capabilityUpgrade": {
+      "marketplaceSync": "Marketplace sync is available on all paid plans.",
+      "advancedAiControlPlane": "Advanced AI controls are available on Growth and Pro plans.",
+      "sms": "SMS messaging is available on all paid plans.",
+      "default": "This capability is available on the {plan} plan."
+    },
+    "softLimitWarningDetailed": "{resource} already exceeds your {plan} plan limit ({usage}/{limit}). Existing usage stays available, but new usage is blocked until you upgrade or reduce it.",
+    "status": {
+      "active": "Active",
+      "trialing": "Trialing",
+      "pastDue": "Past due",
+      "canceled": "Canceled",
+      "incomplete": "Incomplete",
+      "incompleteExpired": "Incomplete expired",
+      "unpaid": "Unpaid",
+      "notSubscribed": "Not subscribed"
+    },
+    "plans": {
+      "starter": {
+        "title": "Starter",
+        "description": "For solo operators and early-stage teams that need one reliable multichannel workspace.",
+        "bestFor": "Best for founders getting their first repeatable sales workflow in place.",
+        "features": {
+          "feature1": "2 team seats and 5 active automation rules",
+          "feature2": "50 knowledge base entries and 1 AI connection",
+          "feature3": "1 marketplace connection and SMS notifications",
+          "feature4": "Core inbox, pipeline, orders, and public store page"
+        }
+      },
+      "growth": {
+        "title": "Growth",
+        "description": "For growing teams that need faster handoffs, more automation, and clearer oversight.",
+        "bestFor": "Best for multi-user teams running daily conversations across channels.",
+        "features": {
+          "feature1": "Everything in Starter",
+          "feature2": "5 team seats, 20 active automations, and 200 knowledge entries",
+          "feature3": "Up to 3 marketplace connections and advanced AI controls",
+          "feature4": "Advanced AI task controls and enrichments"
+        }
+      },
+      "pro": {
+        "title": "Pro",
+        "description": "For high-volume organizations that need more control, throughput, and operational guardrails.",
+        "bestFor": "Best for mature sales ops with stricter workflow and support requirements.",
+        "features": {
+          "feature1": "Everything in Growth",
+          "feature2": "15 team seats, 100 active automations, and 1000 knowledge entries",
+          "feature3": "Up to 10 marketplace connections and premium support",
+          "feature4": "Built for high-volume operations across the workspace"
+        }
+      }
+    }
   }
 }

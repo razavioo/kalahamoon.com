@@ -21,7 +21,12 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": ["./*"],
+      "next-intl": ["./lib/next-intl-shim"],
+      "next-intl/server": ["./lib/next-intl-server-shim"]
+    }
   },
   "include": [
     "next-env.d.ts",
