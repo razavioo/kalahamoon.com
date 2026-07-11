@@ -507,81 +507,255 @@ function NavBar({ locale, t, tCommon, localizedTrialDays }: {
 }
 
 /* ================================================================== */
-/*  Hero — compact product screenshot lead-in                          */
+/*  Hero — one customer signal moving through the sales workflow       */
 /* ================================================================== */
+function HeroWorkflow({ t, isRTL }: {
+  t: ReturnType<typeof useTranslations>;
+  isRTL: boolean;
+}) {
+  const [activeStep, setActiveStep] = useState(0);
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const frame = window.requestAnimationFrame(() => setActiveStep(2));
+      return () => window.cancelAnimationFrame(frame);
+    }
+
+    const interval = window.setInterval(() => {
+      setActiveStep((current) => (current + 1) % 3);
+    }, 2600);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
+  const channels = [
+    { id: 'whatsapp', label: 'WhatsApp', icon: MessageCircle, tone: 'text-green-400 border-green-500/20 bg-green-500/8' },
+    { id: 'telegram', label: 'Telegram', icon: Send, tone: 'text-info border-info/20 bg-info/8' },
+    { id: 'basalam', label: 'Basalam', icon: Store, tone: 'text-orange-400 border-orange-500/20 bg-orange-500/8' },
+    { id: 'digikala', label: 'Digikala', icon: Globe, tone: 'text-warning border-warning/20 bg-warning/8' },
+  ] as const;
+
+  const steps = [
+    { label: t('hero.workflow.message'), icon: MessageSquare },
+    { label: t('hero.workflow.ai'), icon: Bot },
+    { label: t('hero.workflow.sale'), icon: CheckCircle2 },
+  ];
+
+  return (
+    <div className="relative mx-auto w-full max-w-7xl" dir={isRTL ? 'rtl' : 'ltr'}>
+      <div className="grid border-y border-white/10 bg-[#0f0e0d] lg:grid-cols-[5.25rem_minmax(0,1.45fr)_minmax(19rem,0.85fr)]">
+        <div className="hidden border-e border-white/8 bg-[#121110] py-4 lg:flex lg:flex-col lg:items-center lg:gap-3">
+          {channels.map((channel) => {
+            const Icon = channel.icon;
+            return (
+              <div key={channel.id} className={`flex h-11 w-11 items-center justify-center border ${channel.tone}`} title={channel.label}>
+                <Icon className="h-4 w-4" aria-hidden="true" />
+                <span className="sr-only">{channel.label}</span>
+              </div>
+            );
+          })}
+          <div className="mt-auto font-mono text-[9px] text-white/25 [writing-mode:vertical-rl]" dir="ltr">
+            KALAHAMOON
+          </div>
+        </div>
+
+        <div className="min-w-0 border-white/8 p-3 sm:p-5 lg:border-e lg:p-6">
+          <div className="mb-3 flex items-center justify-between gap-3 border-b border-white/8 pb-3 sm:mb-4 sm:pb-4">
+            <div className="flex min-w-0 items-center gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-green-500/20 bg-green-500/10 text-green-400">
+                <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              </div>
+              <div className="min-w-0">
+                <div className="truncate text-sm font-black text-white">{t('hero.workflow.customerName')}</div>
+                <div className="mt-0.5 flex items-center gap-2 text-[11px] text-white/42">
+                  <span>WhatsApp</span>
+                  <span aria-hidden="true">/</span>
+                  <span>{t('hero.workflow.justNow')}</span>
+                </div>
+              </div>
+            </div>
+            <span className="hidden border border-white/8 px-2.5 py-1 font-mono text-[10px] text-white/35 sm:inline-flex" dir="ltr">
+              LEAD-2481
+            </span>
+          </div>
+
+          <div className="grid gap-3 sm:gap-4 md:grid-cols-[0.92fr_1.08fr]">
+            <div className="border border-white/8 bg-[#151413] p-3 sm:p-4">
+              <div className="mb-3 flex items-center justify-between gap-3 text-[10px] font-bold text-white/38">
+                <span>{t('hero.workflow.incoming')}</span>
+                <span className="font-mono" dir="ltr">10:32</span>
+              </div>
+              <p className="text-sm font-semibold leading-6 text-white/82 sm:leading-7 md:text-base">
+                {t('hero.workflow.customerMessage')}
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <span className="border border-warning/20 bg-warning/8 px-2 py-1 text-[10px] font-bold text-warning">
+                  {t('hero.workflow.intent')}
+                </span>
+                <span className="hidden border border-white/8 bg-white/[0.025] px-2 py-1 text-[10px] font-bold text-white/42 sm:inline-flex">
+                  {t('hero.workflow.productContext')}
+                </span>
+              </div>
+            </div>
+
+            <motion.div
+              animate={{ opacity: activeStep >= 1 ? 1 : 0.38, y: activeStep >= 1 ? 0 : 6 }}
+              transition={{ duration: 0.35 }}
+              className="border border-accent-500/22 bg-accent-500/[0.07] p-3 sm:p-4"
+            >
+              <div className="mb-3 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2 text-[11px] font-black text-accent-200">
+                  <Bot className="h-4 w-4" aria-hidden="true" />
+                  {t('hero.workflow.aiDraft')}
+                </div>
+                <span className="flex items-center gap-1.5 text-[10px] text-green-400">
+                  <span className="h-1.5 w-1.5 bg-green-400" aria-hidden="true" />
+                  {t('hero.workflow.ready')}
+                </span>
+              </div>
+              <p className="line-clamp-3 text-sm leading-6 text-white/74 sm:line-clamp-none sm:leading-7">
+                {t('hero.workflow.aiMessage')}
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setActiveStep(2)}
+                  className="inline-flex items-center gap-2 border border-primary bg-primary px-3 py-2 text-xs font-black text-primary-foreground transition-colors hover:bg-primary/90 active:translate-y-px"
+                >
+                  <Send className="h-3.5 w-3.5" aria-hidden="true" />
+                  {t('hero.workflow.approve')}
+                </button>
+                <span className="text-[10px] text-white/32">{t('hero.workflow.humanControl')}</span>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="mt-4 flex gap-2 overflow-x-auto pb-1 lg:hidden">
+            {channels.map((channel) => {
+              const Icon = channel.icon;
+              return (
+                <div key={channel.id} className={`flex shrink-0 items-center gap-2 border px-2.5 py-1.5 text-[10px] font-bold ${channel.tone}`}>
+                  <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+                  {channel.label}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <motion.div
+          animate={{ opacity: activeStep >= 2 ? 1 : 0.45 }}
+          transition={{ duration: 0.35 }}
+          className="border-t border-white/8 bg-[#121110] p-4 sm:p-5 lg:border-t-0 lg:p-6"
+        >
+          <div className="flex h-full flex-col">
+            <div className="flex items-center justify-between gap-3 border-b border-white/8 pb-4">
+              <div>
+                <div className="text-[10px] font-bold text-white/35">{t('hero.workflow.outcome')}</div>
+                <div className="mt-1 text-lg font-black text-white">{t('hero.workflow.orderCreated')}</div>
+              </div>
+              <div className="flex h-10 w-10 items-center justify-center border border-green-500/25 bg-green-500/10 text-green-400">
+                <CheckCircle2 className="h-4 w-4" aria-hidden="true" />
+              </div>
+            </div>
+
+            <div className="grid flex-1 gap-3 py-4 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="border border-white/8 bg-white/[0.018] p-3.5">
+                <div className="text-[10px] text-white/32">{t('hero.workflow.pipelineStage')}</div>
+                <div className="mt-2 flex items-center justify-between gap-3">
+                  <span className="text-sm font-black text-white/80">{t('hero.workflow.negotiation')}</span>
+                  <ArrowRight className={`h-4 w-4 text-accent-400 ${isRTL ? 'rotate-180' : ''}`} aria-hidden="true" />
+                  <span className="text-sm font-black text-green-400">{t('hero.workflow.won')}</span>
+                </div>
+              </div>
+              <div className="border border-white/8 bg-white/[0.018] p-3.5">
+                <div className="text-[10px] text-white/32">{t('hero.workflow.followUp')}</div>
+                <div className="mt-2 text-sm font-black text-white/80">{t('hero.workflow.followUpValue')}</div>
+              </div>
+            </div>
+
+            <div className="border-s-2 border-accent-500 bg-accent-500/[0.06] p-3.5">
+              <div className="text-[10px] font-bold text-accent-300">{t('hero.workflow.resultLabel')}</div>
+              <p className="mt-1.5 text-sm leading-6 text-white/68">{t('hero.workflow.result')}</p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="mt-3 flex items-center justify-center gap-1.5" role="tablist" aria-label={t('hero.workflow.progress')}>
+        {steps.map((step, index) => {
+          const Icon = step.icon;
+          const isActive = activeStep === index;
+          return (
+            <button
+              key={step.label}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => setActiveStep(index)}
+              className={`flex min-h-9 items-center gap-2 border px-3 text-[11px] font-bold transition-colors ${
+                isActive
+                  ? 'border-accent-500/35 bg-accent-500/10 text-accent-200'
+                  : 'border-white/8 bg-transparent text-white/35 hover:border-white/15 hover:text-white/60'
+              }`}
+            >
+              <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+              <span className="hidden sm:inline">{step.label}</span>
+              <span className="font-mono" dir="ltr">0{index + 1}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function HeroSection({ locale, t, isRTL, localizedTrialDays }: {
   locale: string; t: ReturnType<typeof useTranslations>; isRTL: boolean; localizedTrialDays: string;
 }) {
-  const heroImage = isRTL ? '/hero/hero-dashboard-fa.webp' : '/hero/hero-dashboard-en.webp';
-  const dashboardLabel = isRTL ? 'داشبورد کالاهامون' : 'KALAHAMOON DASHBOARD';
-
   return (
-    <section className="relative isolate overflow-hidden px-6 pb-8 pt-24 text-white md:pb-12 md:pt-28">
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-accent-500/5 to-transparent" />
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
+    <section className="relative isolate overflow-hidden px-4 pb-8 pt-24 text-white sm:px-6 md:pb-10 md:pt-28">
+      <div className="relative z-10 mx-auto max-w-7xl">
         <FadeIn delay={0.05}>
-          <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-start">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-none border border-accent-400/25 bg-accent-400/10 px-3 py-1 text-[11px] font-bold text-accent-100">
-              <span className="h-px w-4 bg-accent-300" aria-hidden="true" /> {t('hero.badge')}
-            </div>
-            <h1 className={`mb-4 text-3xl font-black leading-tight md:text-5xl lg:text-6xl ${isRTL ? '' : 'tracking-tight'}`}>
+          <div className="mx-auto max-w-4xl text-center lg:me-0 lg:text-start">
+            <h1 className={`mb-4 text-3xl font-black leading-tight sm:text-4xl md:text-5xl lg:text-6xl ${isRTL ? '' : 'tracking-tight'}`}>
               <span className="text-white">{t('hero.titleLine1')}</span>{' '}
               <span className="text-white/80">{t('hero.titleLine2')}</span>{' '}
               <span className="font-display font-semibold text-accent-200">{t('hero.titleAccent')}</span>
             </h1>
-            <p className="mx-auto mb-6 max-w-2xl text-base leading-8 text-white/72 lg:mx-0 md:text-lg">
+            <p className="mx-auto mb-5 max-w-3xl text-sm leading-7 text-white/68 sm:text-base sm:leading-8 lg:mx-0 md:text-lg">
               {t('hero.description')}
             </p>
-            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
+            <div className="flex items-center justify-center lg:justify-start">
               <Link
                 href={buildPublicSignupHref(locale)}
-                className="group border border-primary bg-primary px-8 py-3.5 text-base font-black text-primary-foreground shadow-[0_18px_60px_rgba(234,88,12,0.24)] transition-colors hover:bg-primary/90 active:translate-y-[1px]"
+                className="group w-full border border-primary bg-primary px-7 py-3.5 text-center text-sm font-black text-primary-foreground transition-colors hover:bg-primary/90 active:translate-y-px sm:w-auto sm:text-base"
               >
-                <span className="flex items-center gap-2">
+                <span className="flex items-center justify-center gap-2">
                   {t('hero.primaryCta', { days: localizedTrialDays })}
                   <ArrowRight className={`h-4 w-4 transition-transform ${isRTL ? 'rotate-180 group-hover:-translate-x-0.5' : 'group-hover:translate-x-0.5'}`} />
                 </span>
               </Link>
-              <a href="#contact" className="border border-white/15 bg-white/[0.03] px-7 py-3.5 font-semibold text-white/78 transition-all hover:border-white/25 hover:bg-white/[0.06] hover:text-white">
-                {t('hero.secondaryCta')}
-              </a>
-            </div>
-            <div className="mx-auto mt-5 flex max-w-2xl flex-wrap items-center justify-center gap-2 text-xs font-semibold text-white/68 lg:mx-0 lg:justify-start">
-              {[
-                t('hero.confidence.trial', { days: localizedTrialDays }),
-                t('hero.confidence.channels'),
-                t('hero.confidence.setup'),
-              ].map((item) => (
-                <span key={item} className="inline-flex items-center gap-2 rounded-none border border-white/10 bg-white/[0.04] px-3 py-1.5">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-accent-300" />
-                  {item}
-                </span>
-              ))}
             </div>
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.14} y={18}>
-          <div className="relative mx-auto w-full max-w-2xl lg:max-w-none">
-            {/* Elegant double-border editorial frame with Clay Terracotta accent */}
-            <div className="relative overflow-hidden rounded-none border border-white/10 bg-[#151413]/72 p-3 shadow-[0_24px_100px_rgba(0,0,0,0.35)] ring-1 ring-white/[0.03]">
-              <div className="flex justify-between items-center mb-3 text-[9px] font-mono tracking-widest text-accent-400 uppercase">
-                <span>Omnichannel Inbox</span>
-              </div>
-              <div className="relative aspect-[16/10] overflow-hidden border border-white/5 bg-black/40">
-                <Image
-                  src={heroImage}
-                  alt=""
-                  fill
-                  priority
-                  className="object-contain"
-                  sizes="(min-width: 1024px) 54vw, 100vw"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#151413]/35 via-transparent to-white/[0.02]" />
-              </div>
-            </div>
+        <FadeIn delay={0.12} y={16}>
+          <div className="mt-6 md:mt-9">
+            <HeroWorkflow t={t} isRTL={isRTL} />
           </div>
         </FadeIn>
+
+        <div className="mt-5 flex flex-col items-center justify-between gap-4 border-t border-white/8 pt-4 text-xs font-semibold text-white/48 sm:flex-row">
+          <a href="#contact" className="border-b border-white/20 pb-1 transition-colors hover:border-accent-400 hover:text-white">
+            {t('hero.secondaryCta')}
+          </a>
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:justify-end">
+            <span>{t('hero.confidence.trial', { days: localizedTrialDays })}</span>
+            <span>{t('hero.confidence.channels')}</span>
+            <span>{t('hero.confidence.setup')}</span>
+          </div>
+        </div>
       </div>
     </section>
   );

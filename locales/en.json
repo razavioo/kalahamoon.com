@@ -104,6 +104,32 @@
         "trial": "{days}-day trial",
         "channels": "Core channels included",
         "setup": "Guided setup path"
+      },
+      "workflow": {
+        "message": "Customer message",
+        "ai": "AI-assisted reply",
+        "sale": "Sale completed",
+        "customerName": "Niloofar Ahmadi",
+        "justNow": "Just now",
+        "incoming": "Incoming product question",
+        "customerMessage": "Is this item available in black, and can it arrive in Tehran tomorrow?",
+        "intent": "Purchase intent detected",
+        "productContext": "Product and delivery context loaded",
+        "aiDraft": "AI sales draft",
+        "ready": "Ready for review",
+        "aiMessage": "Yes, black is available. Delivery to Tehran can be scheduled for tomorrow. I can confirm the order for you now.",
+        "approve": "Approve and send",
+        "humanControl": "A sales rep stays in control",
+        "outcome": "Sales outcome",
+        "orderCreated": "Order confirmed",
+        "pipelineStage": "Pipeline movement",
+        "negotiation": "Negotiation",
+        "won": "Won",
+        "followUp": "Automation",
+        "followUpValue": "Delivery follow-up scheduled",
+        "resultLabel": "Message to sale",
+        "result": "The conversation, AI response, pipeline, and follow-up stay in one shared workflow.",
+        "progress": "Message-to-sale workflow"
       }
     },
     "mockup": {
