@@ -649,40 +649,44 @@
     "login": "Log in",
     "dashboard": "Open dashboard",
     "eyebrow": "Browser extension",
-    "status": "Chrome Web Store: coming soon",
-    "title": "Install Kalahamoon Extension manually today",
-    "description": "Capture products from supported marketplaces, review the extracted data, and send it to WooCommerce, Shopify, Basalam, or your clipboard while the Chrome Web Store listing is being finalized.",
-    "manualCta": "Download Chrome package",
-    "manualHint": "Use this file with Chrome's Load unpacked flow after extracting it on your computer.",
-    "storeCta": "Chrome Web Store coming soon",
-    "storeHint": "The public listing is not live yet. Manual installation is the supported path for now.",
+    "status": "Published on Chrome Web Store",
+    "title": "Install Kalahamoon from the Chrome Web Store",
+    "description": "Install the extension, sign in to the Kalahamoon panel, connect WooCommerce, then capture a supported product page and send it to your store after review.",
+    "storeCta": "Add to Chrome",
+    "storeHint": "Use the published Chrome Web Store listing for normal installation. Chrome manages updates after each new version is published.",
     "visualTitle": "Marketplace capture cockpit",
     "visualSubtitle": "Right-click a product, review the extraction, then push it to your commerce stack.",
-    "visualBadge": "Manual install ready",
+    "visualBadge": "Official listing",
     "browserChrome": "Chrome",
-    "browserFirefox": "Firefox package available soon",
-    "comingSoonShort": "soon",
     "supportedDestinations": "WooCommerce · Shopify · Basalam · Clipboard",
-    "installTitle": "Manual Chrome installation",
-    "installLead": "This is the first supported installation path until the Chrome Web Store review is complete.",
-    "steps": {
-      "download": {
-        "title": "Download and extract",
-        "description": "Download the Chrome package, unzip it, and keep the extracted folder somewhere stable. Chrome reads the extension directly from this folder."
+    "installTitle": "Install from the store",
+    "installLead": "Install from the Chrome Web Store first. Store credentials and connections are configured in the Kalahamoon panel, not inside the extension.",
+    "publishedLabel": "Published extension",
+    "listingTitle": "Kalahamoon on Chrome Web Store",
+    "storePointInstall": "One-click installation from the Chrome Web Store, without asking users to enable Developer mode.",
+    "storePointUpdates": "Chrome handles updates after a new version is published to the listing.",
+    "storePointFallback": "Manual packages are reserved for internal testing and emergency support only.",
+    "workflowTitle": "Connect your store and import a product",
+    "workflowLead": "Follow these four steps for the WooCommerce flow. The extension sends the reviewed product to the store connected in your Kalahamoon panel.",
+    "workflow": {
+      "signIn": {
+        "title": "Sign in to Kalahamoon",
+        "description": "Create your workspace or sign in to the Kalahamoon panel with the same account you will use in the extension."
       },
-      "developerMode": {
-        "title": "Open Chrome Extensions",
-        "description": "Go to chrome://extensions and turn on Developer mode from the top corner of the page."
+      "connectWooCommerce": {
+        "title": "Connect WooCommerce",
+        "description": "Open WooCommerce settings in the panel and add your store URL plus WooCommerce API credentials. Test the connection before importing products."
       },
-      "loadUnpacked": {
-        "title": "Load unpacked folder",
-        "description": "Click Load unpacked and select the extracted dist folder. Pin the extension from Chrome's toolbar for quicker access."
+      "captureProduct": {
+        "title": "Open a supported product page",
+        "description": "Visit one product page on a supported source website, then open the Kalahamoon extension from the Chrome toolbar."
       },
-      "configure": {
-        "title": "Configure destinations",
-        "description": "Open the extension settings, enable the destinations you use, and add your WooCommerce, Shopify, Basalam, or clipboard settings."
+      "sendProduct": {
+        "title": "Review and send",
+        "description": "Choose WooCommerce, review the title, price, images, and stock, then send the product to the connected store."
       }
     },
+    "connectCta": "Open WooCommerce settings",
     "featureTitle": "What it gives your team",
     "features": {
       "capture": "Capture product data from supported marketplace pages without copy-pasting.",
@@ -690,21 +694,23 @@
       "route": "Send products to WooCommerce, Shopify, Basalam API, or clipboard output.",
       "control": "Keep destinations disabled until their credentials are configured correctly."
     },
-    "comingSoonTitle": "Chrome Web Store release",
-    "comingSoonDescription": "The Chrome Web Store listing is being prepared. Once approved, this page will switch the main action to one-click store installation while keeping manual setup as a backup path.",
     "faqTitle": "Installation notes",
     "faq": {
+      "priceRefresh": {
+        "q": "Will my WooCommerce price update when the source price changes?",
+        "a": "For verified supported source pages such as Shoudermarket and Tileiran, source-controlled price sync checks hourly after import. It updates only when a valid positive source price is available and price sync remains enabled."
+      },
       "safe": {
-        "q": "Is manual installation temporary?",
-        "a": "Yes. It is the recommended path only while the Chrome Web Store listing is pending."
+        "q": "Can this page remove Chrome's Enhanced Safe Browsing trust notice?",
+        "a": "No. That notice is controlled by Chrome and the Chrome Web Store trust system, not by this landing page. Keep the listing accurate, minimize permissions over time, and publish updates through the store."
       },
       "update": {
         "q": "How do updates work?",
-        "a": "Download the newer package, replace the extracted folder, then press Reload on chrome://extensions."
+        "a": "Chrome updates store installs after a new version is published. Users do not need to replace folders or reload unpacked extensions."
       },
       "where": {
-        "q": "Which folder should I choose?",
-        "a": "Choose the extracted Chrome build folder, normally named dist, not the zip file itself."
+        "q": "Where should I install the extension?",
+        "a": "Use the official Chrome Web Store listing for normal installation. Internal test packages are used only when support asks you to use one."
       }
     }
   },
