@@ -1693,12 +1693,13 @@ function DemoForm() {
   const t = useTranslations('landingPage');
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const runtimeOrigin = (process.env.NEXT_PUBLIC_RUNTIME_APP_URL || process.env.NEXT_PUBLIC_APP_URL || 'https://app.kalahamoon.com').replace(/\/$/, '');
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('/api/landing/leads', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) });
+      const res = await fetch(`${runtimeOrigin}/api/landing/leads`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData) });
       if (!res.ok) throw new Error('Failed');
       toast.success(t('demo.form.success'));
       setFormData({ name: '', email: '', message: '' });

@@ -36,6 +36,9 @@ jobs:
           NEXT_PUBLIC_PUBLIC_SITE_URL: https://kalahamoon.com
           NEXT_PUBLIC_RUNTIME_APP_URL: https://app.kalahamoon.com
           PUBLIC_SITE_CUSTOM_DOMAIN: kalahamoon.com
+          NEXT_PUBLIC_MATOMO_ENABLED: ${{ vars.MATOMO_ENABLED || 'false' }}
+          NEXT_PUBLIC_MATOMO_URL: ${{ vars.MATOMO_URL }}
+          NEXT_PUBLIC_MATOMO_SITE_ID: ${{ vars.MATOMO_SITE_ID }}
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
