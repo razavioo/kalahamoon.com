@@ -678,6 +678,7 @@
     "status": "Published on Chrome Web Store",
     "title": "Install Kalahamoon from the Chrome Web Store",
     "description": "Install the extension, sign in to the Kalahamoon panel, connect WooCommerce, then capture a supported product page and send it to your store after review.",
+    "releaseNote": "New: TileIran's HikaShop catalog is supported with the same review-before-send workflow.",
     "storeCta": "Add to Chrome",
     "storeHint": "Use the published Chrome Web Store listing for normal installation. Chrome manages updates after each new version is published.",
     "visualTitle": "Marketplace capture cockpit",

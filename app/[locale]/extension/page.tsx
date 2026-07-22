@@ -54,6 +54,7 @@ export default async function ExtensionPage({
             {translate(locale, "extensionPage.title")}
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-white/62">{translate(locale, "extensionPage.description")}</p>
+          <p className="mt-4 max-w-2xl border-s border-accent-500/50 ps-4 text-sm leading-7 text-white/70">{translate(locale, "extensionPage.releaseNote")}</p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
               href={CHROME_WEBSTORE_URL}
